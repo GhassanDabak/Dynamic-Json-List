@@ -1,0 +1,66 @@
+{
+  "files": [],
+  "compilerOptions": {
+    /* Config */
+    "target": "ES2020",
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+
+    /* Bundler mode */
+    "noEmit": true,
+    "allowJs": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "baseUrl": "src/",
+    "paths": {
+      "_libs/*": ["libs/*"],
+      "_hooks/*": ["hooks/*"],
+      "_redux/*": ["redux/*"],
+      "_types/*": ["types/*"],
+      "_utils/*": ["utils/*"],
+      "_assets/*": ["assets/*"],
+      "_routes/*": ["routes/*"],
+      "_scenes/*": ["scenes/*"],
+      "_styles/*": ["styles/*"],
+      "_docs/*": ["__docs__/*"],
+      "_tests/*": ["__tests__/*"],
+      "_locales/*": ["locales/*"],
+      "_network/*": ["network/*"],
+      "_context/*": ["context/*"],
+      "_atoms": ["components/atoms"],
+      "_generated/*": ["__generated__/*"],
+      "_molecules": ["components/molecules"],
+      "_organisms": ["components/organisms"]
+    },
+    "types": ["vite/client", "node", 
+    // "jest"
+  ]
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.js",
+    "src/**/*.jsx",
+    "tests/**/*.ts",
+    "tests/**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules",
+    // "src/__tests__/unit/jestSetup.ts",
+    "src/__tests__/automation/automationSetup.ts"
+  ],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}
